@@ -68,16 +68,26 @@ def read_tegs():
 
 def desaired_content(key):
     '''
-    :param key: слово по которому идет поиск тегов
+    :param key: слово по которому идет поиск тегов, если имеет #, ищет только теги
+    иначе по всему тексту
     :return: возвращет индексы, если искомый тег соответствует списку тегов
     '''
     result = []
+    posts = load_posts_json()
     list_tegs = read_tegs()
-    for item in list_tegs:
-        item_values = list(item.values())[0]
-        if item_values and key in item_values:
-            result.append(list(item.keys())[0])
+    if key[0] == '#':
+        key = key[1:]
+        for item in list_tegs:
+            item_values = list(item.values())[0]
+            if item_values and key in item_values:
+                result.append(list(item.keys())[0])
+    else:
+        for post in posts:
+            if key in post['content']:
+                result.append(posts.index(post))
     return result
+
+
 
 
 def desired_posts(list_index):
@@ -127,3 +137,4 @@ def is_filename_allowed(filename):
     if extension in ALLOWED_EXTENSIONS:
         return True
     return False
+

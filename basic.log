@@ -733,3 +733,61 @@ INFO:werkzeug:127.0.0.1 - - [13/Dec/2022 22:20:43] "GET /uploads/images/dog.bmp 
 INFO:werkzeug:127.0.0.1 - - [13/Dec/2022 23:07:14] "GET /post HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Dec/2022 23:07:41] "POST /post_uploaded HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Dec/2022 23:07:42] "GET /uploads/images/image.jpg HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:Посты по запросу img запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:33] "GET /search.html?s=img HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:33] "[36mGET /uploads/images/dostoevskiy.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:36] "GET / HTTP/1.1" 200 -
+INFO:root:Посты по запросу космо запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:38] "GET /search.html?s=космо HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:38] "GET /uploads/images/1625551573_17-kartinkin-com-p-topovii-fon-dlya-rabochego-stola-krasivie-17.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:40] "GET / HTTP/1.1" 200 -
+INFO:root:Посты по запросу kn запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:43] "GET /search.html?s=kn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:44] "GET /uploads/images/ava.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:47] "GET / HTTP/1.1" 200 -
+INFO:root:Посты по запросу #гулять запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:51] "GET /search.html?s=%23гулять HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:35:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:36:08] "GET /post HTTP/1.1" 200 -
+INFO:root:Файл "i.webp" не картинка
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:36:24] "POST /post_uploaded HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:48:20] "GET / HTTP/1.1" 200 -
+ERROR:app:Exception on /search.html [GET]
+Traceback (most recent call last):
+  File "D:\programm\anac\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\programm\anac\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\programm\anac\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\programm\anac\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "D:\programm\anac\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\programm\anac\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\cods\clons\backup\hw_12\main\main.py", line 22, in list_post
+    posts = desired_posts(index_posts)
+  File "D:\cods\clons\backup\hw_12\functions.py", line 96, in desired_posts
+    result.append(posts[index])
+TypeError: list indices must be integers or slices, not dict
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:48:25] "[35m[1mGET /search.html?s=img HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:04] "GET / HTTP/1.1" 200 -
+INFO:root:Посты по запросу img запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:07] "GET /search.html?s=img HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:14] "GET / HTTP/1.1" 200 -
+INFO:root:Посты по запросу кот запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:20] "GET /search.html?s=кот HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:31] "GET / HTTP/1.1" 200 -
+INFO:root:Посты по запросу kn запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:38] "GET /search.html?s=kn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:49] "GET / HTTP/1.1" 200 -
+INFO:root:Посты по запросу #гулять запрошены
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:54] "GET /search.html?s=%23гулять HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:58] "GET / HTTP/1.1" 200 -

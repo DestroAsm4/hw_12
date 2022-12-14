@@ -3,27 +3,18 @@ from functions import *
 import logging
 import os
 
-
+# создание блюпринта и логера
 main = Blueprint('main', __name__, template_folder='templates')
-
-picfolder = os.path.join('uploads', 'images')
-
 logging.basicConfig(filename="basic.log", level=logging.INFO)
 
 
-
-src = os.path.join(picfolder, 'dostoevskiy.jpg')
-
-
+# представление стартовой страницы
 @main.route('/')
 def index_page():
     return render_template('index.html')
 
-@main.route('/page')
-def test():
-    return render_template('index.html', img=src)
 
-
+# представление страницы поиска постов
 @main.route('/search.html')
 def list_post():
     key_search = request.args['s']
