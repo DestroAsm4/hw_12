@@ -791,3 +791,7 @@ INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:49] "GET / HTTP/1.1" 200 -
 INFO:root:ѕосты по запросу #гул€ть запрошены
 INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:54] "GET /search.html?s=%23гул€ть HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 12:56:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 13:08:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 13:09:03] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2022 13:09:17] "[31m[1mPOST /post_uploaded HTTP/1.1[0m" 413 -
